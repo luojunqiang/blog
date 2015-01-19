@@ -66,6 +66,7 @@ gcc -Wall -fPIC -shared -o myfopen.so myfopen.c -ldl
 - http://stackoverflow.com/questions/5478780/c-and-ld-preload-open-and-open64-calls-intercepted-but-not-stat64
 - http://www.catonmat.net/blog/simple-ld-preload-tutorial/
 - http://www.catonmat.net/blog/simple-ld-preload-tutorial-part-2/
+- https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/ (great!) 
 
 ## 备注
 
