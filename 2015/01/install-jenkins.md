@@ -32,7 +32,6 @@ https://ci.jenkins-ci.org/job/jenkins_main_trunk/
 - https://wiki.jenkins-ci.org/display/JENKINS/Running+Jenkins+behind+Apache
 - http://wiki.uniformserver.com/index.php/Reverse_Proxy_Server_2:_mod_proxy_html_2
 - http://www.apachetutor.org/admin/reverseproxies
-- https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/ (great!) 
 
 ```
 a2enmod proxy
