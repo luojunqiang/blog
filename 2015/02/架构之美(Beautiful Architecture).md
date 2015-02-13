@@ -43,9 +43,9 @@
 - 复制原始对象而不要引用，可以保留一个到原始对象的连接信息以便后续能根据原始对象进行更新。
 - RESTful方式要求请求是无状态的。生成响应需要的所有信息都要放在请求中。
 
-jakarta.apache.org/bcel
-asm.objectweb.org/
-gnu classpath
+- jakarta.apache.org/bcel
+- asm.objectweb.org/
+- gnu classpath
 
 plugin 要作为第一等公民存在，其开发应尽量简单。如果可能应做到隔离plugin问题影响主应用。
 
