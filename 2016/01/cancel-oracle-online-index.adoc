@@ -1,0 +1,42 @@
+
+.Cancel Oracle online index building
+----
+SQL> alter index CBSBILL.INX_SUBS_COUNTER rebuild parallel 16;
+alter index CBSBILL.INX_SUBS_COUNTER noparallel;alter index CBSBILL.INX_SUBS_COUNTER rebuild parallel 16
+*
+ERROR at line 1:
+ORA-08104: this index object 5366526 is being online built or rebuilt
+
+
+SQL>
+alter index CBSBILL.INX_SUBS_COUNTER noparallel
+*
+ERROR at line 1:
+ORA-08104: this index object 5366526 is being online built or rebuilt
+
+
+SQL> !oerr ora 8104
+08104, 00000, "this index object %s is being online built or rebuilt"
+// *Cause:  the index is being created or rebuild or waited for recovering
+//          from the online (re)build
+// *Action: wait the online index build or recovery to complete
+
+SQL> declare
+  done boolean;
+begin
+  done:=dbms_repair.online_index_clean(5366526);
+end;
+/  2    3    4    5    6
+
+PL/SQL procedure successfully completed.
+
+SQL> alter index CBSBILL.INX_SUBS_COUNTER rebuild parallel 16;
+alter index CBSBILL.INX_SUBS_COUNTER noparallel;
+
+Index altered.
+
+SQL>
+Index altered.
+
+SQL>
+----
